@@ -19,7 +19,7 @@ SELECT
     o.razao_social,
     o.nome_fantasia,
     SUM(d.vl_saldo_final - d.vl_saldo_inicial) AS total_despesas,
-    TO_CHAR(SUM(d.vl_saldo_final - d.vl_saldo_inicial), 'L999G999G990D99') AS despesas_formatadas
+    SUM(d.vl_saldo_final - d.vl_saldo_inicial) AS despesas_formatadas
 FROM 
     demonstracoes_contabeis d
 JOIN 
